@@ -1,0 +1,14 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* quy đổi 1 rem thành 10px */
+}
+
+body {
+    font-size: 1.6rem;
+    /* 16px */
+}
