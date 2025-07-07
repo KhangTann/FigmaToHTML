@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-heading: "Sen", sans-serif; 
+    --precolor: #FFB900;    
+}
+
 html {
     font-size: 62.5%;
     /* quy đổi 1 rem thành 10px */
@@ -29,12 +34,18 @@ a {
     font-size: 1.6rem;
     font-weight: 600px;
     background: #171100;
-    border-radius: 23px;
+    border-radius: 999px;
     text-align: center;
     padding: 0px 0px;
     line-height: 50px;
     min-width: 118px;
     /* sửa padding về 0 để có đúng 50px */
+}
+
+.btn:hover {
+    transition: 0.5s;
+    opacity: 0.9;
+    color: red;
 }
 
 
@@ -53,6 +64,8 @@ a {
 .header.fixed {
     position: sticky;
     top: -28px;
+    /* ?????? */
+    z-index: 1;
 }
 .header .body {
     display: flex;
@@ -123,4 +136,181 @@ p {
 
 .header .action {
     margin-left: 49px;
+}
+
+
+/* --------------------hero----------------------- */
+
+.hero {
+    padding: 56px 0px 65px;
+    background: #fffcf4;
+}
+
+.hero .body {
+    display: flex;
+}
+
+.hero .media-block {
+    width: 48%;
+    position: relative;
+}
+
+
+
+/* XỬ LÝ ẢNH KHI NG DÙNG UPLOAD ẢNH CÓ SIZE KHÁC, LÀM VỠ GIAO DIỆN */
+.hero .media-block .img {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+  
+}
+
+.hero .hero-summary {
+    width: 270px;
+    padding: 24px;
+    position: absolute;
+    bottom: 48px;
+    right: 0px; 
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 16px 32px 0px #0000000D;
+}
+
+.hero-summary .item{
+    align-items: center;
+    display: flex;
+}
+
+.hero-summary .item + .item{
+    margin-top: 22px;
+    /* làm item2 và item3 */
+}
+
+.hero-summary .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff9e8;
+}
+
+.hero-summary .icon2 {
+    background-color: #FCEFFF;
+}
+
+.hero-summary .icon3 {
+    background-color: #EBEAFF;
+}
+
+.hero-summary .info {
+    margin-left: 16px;
+}
+
+.hero-summary .label {
+    line-height: 26px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+}
+
+.hero-summary .title {
+  
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: #171100; 
+    font-weight: 600;
+
+}
+
+/*----------------- RIGHT ------------------*/
+.hero .content-block {
+    width: 52%;
+    padding-left: 130px;
+    padding-top: 64px;  
+}
+
+.hero .heading {
+    font-family: --var(--font-heading);
+    font-weight: 700;
+    font-size: 5.8rem;
+    /* 58px */
+    /* line-height: 68px; */
+    line-height: 1.17   ;
+    letter-spacing: -1.16px;
+}
+
+.hero .desc {
+    margin-top: 22px;
+    font-weight: 400;
+    /* font-size: 18px; */
+    font-size: 1.8rem;
+    /* line-height: 30px; */
+    line-height: 1.67;
+}
+
+.hero .cta-group {
+    margin-top: 38px;
+    color: red;
+    display: flex;
+    align-items: center;
+}
+
+.hero-cta {
+    min-width: 180px;
+    background-color: var(--precolor);
+}
+
+.hero .watch-video {
+    border: none;
+    background: transparent;
+    display: flex;
+    margin-left: 28px;
+    margin-top: 25px; 
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero .watch-video .icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0 , 0.07);
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .watch-video span {
+    margin-left: 14px;  
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    /* margin-bottom: 15px; */
+}
+
+
+.hero .desc-re {
+    margin-top: 48px;
+}
+
+.hero .stats {
+    margin-top: 25  px;
+}
+
+.hero .stats strong {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.23;
+    margin-right: 15px;
+}
+
+.hero .stats strong:nth-child(2) {
+    margin-left: 28px;
 }
