@@ -60,8 +60,29 @@ a {
 
 }
 
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
 
+/* muốn những thẻ nào chỉ 1 dòng, thì thêm class line clamp vào nó */
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
+/* phần tử nào có đồng thời 2 class line2 và line clamp mới dùng cái này */
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
 
 
 
@@ -93,12 +114,7 @@ a {
     display: flex;
 }
 
-.main-content {
-    width: 1170px;
-    max-width: calc(100% - 48px);
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .nav a {
     color: #5f5b53;
@@ -398,7 +414,7 @@ p {
     /* border-radius: 12px;
     background: #fff;
     box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05); */
-
+    flex: 1;
     border-radius: 12px;
     border: 1px solid #e2dfda;
     background: #fff;
